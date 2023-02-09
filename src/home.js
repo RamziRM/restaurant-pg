@@ -24,6 +24,7 @@ function createHome() {
 // add createHome() to main element in HTML
 function loadHome() {
     const main = document.getElementById('main');
+    main.textContent = "";
     main.appendChild(createHome());
 }
 
