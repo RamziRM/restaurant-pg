@@ -17,7 +17,8 @@ createHeader = () => {
     restoLogo.textContent = "Luigi's PIZZA";
 
     header.appendChild(restoLogo);
-    //add createNavbar()
+    // add navbar to header
+    header.appendChild(createNavbar());
 
 }
 
@@ -52,6 +53,12 @@ createNavbar = () => {
         else setActiveBtn(contactBtn);
         loadContact();
     })
+
+    navbar.appendChild(homeBtn);
+    navbar.appendChild(menuBtn);
+    navbar.appendChild(contactBtn);
+
+    return navbar;
 };
 
 // Set active class to btn clicked + removes active from any other nav-btn
@@ -64,4 +71,16 @@ setActiveBtn = (btn) => {
         }
     })
     btn.classList.add('active');
+}
+
+// createMain() -- referenced in each module
+createMain = () => {
+    const main = document.createElement('div');
+    main.classList.add('main');
+}
+
+// createFooter() -- random ©
+createFooter = () => {
+    const footer = document.createElement('div');
+    footer.classList.add('footer');
 }
