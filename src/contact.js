@@ -1,6 +1,6 @@
 // Name - contact info
 
-createContact = () => {
+ function createContact () {
     const contact = document.createElement('div');
     contact.classList.add('contact');
 
@@ -19,25 +19,27 @@ createContact = () => {
             'luigi@luigipizza.com'
         )
     )
+
+    return contact;
 };
 
 // contact creation f()-- Name - number - email //inputs
-function contactForm(fullName, number, email) {
+function contactForm(name, number, email) {
     const contactInput = document.createElement('div');
     contactInput.classList.add('contact-input');
 
     const fullName = document.createElement('h3');
-    fullName.textContent = fullName;
+    fullName.textContent = name;
 
-    const number = document.createElement('p');
-    number.textContent = number;
+    const phone = document.createElement('p');
+    phone.textContent = number;
 
-    const email = document.createElement('p');
-    email.textContent = email;
+    const contactEmail = document.createElement('p');
+    contactEmail.textContent = email;
 
     contactInput.appendChild(fullName);
-    contactInput.appendChild(Number);
-    contactInput.appendChild(email);
+    contactInput.appendChild(phone);
+    contactInput.appendChild(contactEmail);
 
     return contactInput;
 }

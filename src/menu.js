@@ -41,23 +41,23 @@ function createMenuItem(name, price, details, img) {
     const menuItem = document.createElement('div');
     menuItem.classList.add('menu-item');
 
-    const name = document.createElement('h2');
-    name.textContent = name;
+    const pizzaName = document.createElement('h2');
+    pizzaName.textContent = name;
 
-    const price = document.createElement('a');
-    price.textContent = $ + price;
+    const pizzaPrice = document.createElement('a');
+    pizzaPrice.textContent = $ + price;
 
-    const details = document.createElement('p');
-    details.textContent = details;
+    const pizzaDetails = document.createElement('p');
+    pizzaDetails.textContent = details;
 
-    const img = document.createElement('img')
-    img.src = img;
-    img.alt = `${name}`;
+    const pizzaImg = document.createElement('img')
+    pizzaImg.src = img;
+    pizzaImg.alt = `${pizzaName}`;
 
-    menuItem.appendChild(img);
-    menuItem.appendChild(name);
-    menuItem.appendChild(price);
-    menuItem.appendChild(details);
+    menuItem.appendChild(pizzaImg);
+    menuItem.appendChild(pizzaName);
+    menuItem.appendChild(pizzaPrice);
+    menuItem.appendChild(pizzaDetails);
 
     return menuItem;
 }
