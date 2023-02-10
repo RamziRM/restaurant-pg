@@ -20,6 +20,7 @@ createHeader = () => {
     // add navbar to header
     header.appendChild(createNavbar());
 
+    return header;
 }
 
 createNavbar = () => {
@@ -77,10 +78,27 @@ setActiveBtn = (btn) => {
 createMain = () => {
     const main = document.createElement('div');
     main.classList.add('main');
+
+    return main;
 }
 
 // createFooter() -- random ©
 createFooter = () => {
     const footer = document.createElement('div');
     footer.classList.add('footer');
+
+    return footer;
 }
+
+loadWebsite = () => {
+    const content = document.getElementById('content');
+
+    content.appendChild(createHeader);
+    content.appendChild(createMain);
+    content.appendChild(createFooter);
+
+    //Load homepage initially
+    loadHome();
+}
+
+export default loadWebsite;
