@@ -44,7 +44,7 @@ function contactForm(name, number, email) {
     return contactInput;
 }
 
-loadContact = () => {
+function loadContact() {
     const main = document.getElementById('main');
     main.textContent = "";
     main.appendChild(createContact());

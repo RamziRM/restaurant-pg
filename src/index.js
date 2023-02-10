@@ -8,7 +8,7 @@ import loadMenu from './menu';
 import loadContact from './contact';
 
 // Create header -- Should be linked to content
-createHeader = () => {
+function createHeader() {
     const header = document.createElement('header');
     header.classList.add('header');
 
@@ -21,9 +21,9 @@ createHeader = () => {
     header.appendChild(createNavbar());
 
     return header;
-}
+};
 
-createNavbar = () => {
+function createNavbar() {
     const navbar = document.createElement('nav');
 
     // add buttons for each tab-module -- EL, triggers pg load (imported)
@@ -63,7 +63,7 @@ createNavbar = () => {
 };
 
 // Set active class to btn clicked + removes active from any other nav-btn
-setActiveBtn = (btn) => {
+function setActiveBtn(btn) {
     const btns = document.querySelectorAll('.nav-btn');
 
     btns.forEach((btn) => {
@@ -72,25 +72,25 @@ setActiveBtn = (btn) => {
         }
     })
     btn.classList.add('active');
-}
+};
 
 // createMain() -- referenced in each module
-createMain = () => {
+function createMain() {
     const main = document.createElement('div');
     main.classList.add('main');
 
     return main;
-}
+};
 
 // createFooter() -- random ©
-createFooter = () => {
+function createFooter() {
     const footer = document.createElement('div');
     footer.classList.add('footer');
 
     return footer;
-}
+};
 
-loadWebsite = () => {
+function loadWebsite() {
     const content = document.getElementById('content');
 
     content.appendChild(createHeader);
@@ -99,6 +99,6 @@ loadWebsite = () => {
 
     //Load homepage initially
     loadHome();
-}
+};
 
 export default loadWebsite;
