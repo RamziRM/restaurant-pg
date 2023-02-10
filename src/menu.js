@@ -11,7 +11,7 @@ function createMenu() {
             'Margherita',
             5,
             'Muzzarella cheese, tomato sauce and fresh basil',
-            '/images/margherita.png'
+            './images/margherita.png'
         )
     );
     menu.appendChild(
@@ -19,7 +19,7 @@ function createMenu() {
             'Pepperoni',
             7,
             'Muzzarella cheese, tomato sauce, imported salami from Italy and a drizzle of spicy olive oil.',
-            '/images/pepperoni.png'
+            './images/pepperoni.png'
         )
     );
     menu.appendChild(
@@ -27,7 +27,7 @@ function createMenu() {
             'Vegetarian',
             6,
             'Muzzarella cheese, tomato sauce and an arrangement of in season vegetables slightly sauteed beforehand.',
-            '/images/vegetarian.png'
+            './images/vegetarian.png'
         )
     );
 
@@ -45,7 +45,7 @@ function createMenuItem(name, price, details, img) {
     pizzaName.textContent = name;
 
     const pizzaPrice = document.createElement('a');
-    pizzaPrice.textContent = $ + price;
+    pizzaPrice.textContent = `$ ${price}`;
 
     const pizzaDetails = document.createElement('p');
     pizzaDetails.textContent = details;

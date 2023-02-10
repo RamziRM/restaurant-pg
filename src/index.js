@@ -32,8 +32,8 @@ function createNavbar() {
     homeBtn.classList.add('nav-btn');
     homeBtn.textContent = 'Home';
     homeBtn.addEventListener('click', e => {
-        if (e.target.classList.contatins('active')) return;
-        else setActiveBtn(homeBtn);
+        if (e.target.classList.contains('active')) return;
+        setActiveBtn(homeBtn);
         loadHome();
     });
 
@@ -41,8 +41,8 @@ function createNavbar() {
     menuBtn.classList.add('nav-btn');
     menuBtn.textContent = 'Menu';
     menuBtn.addEventListener('click', (e) => {
-        if (e.target.classList.contatins('active')) return;
-        else setActiveBtn(menuBtn);
+        if (e.target.classList.contains('active')) return;
+        setActiveBtn(menuBtn);
         loadMenu();
     });
 
@@ -50,10 +50,10 @@ function createNavbar() {
     contactBtn.classList.add('nav-btn');
     contactBtn.textContent = 'Contact';
     contactBtn.addEventListener('click', (e) => {
-        if(e.target.contatins('active')) return;
-        else setActiveBtn(contactBtn);
+        if(e.target.classList.contains('active')) return;
+        setActiveBtn(contactBtn);
         loadContact();
-    })
+    });
 
     navbar.appendChild(homeBtn);
     navbar.appendChild(menuBtn);
@@ -78,6 +78,7 @@ function setActiveBtn(btn) {
 function createMain() {
     const main = document.createElement('div');
     main.classList.add('main');
+    main.setAttribute('id', 'main')
 
     return main;
 };
@@ -93,12 +94,13 @@ function createFooter() {
 function loadWebsite() {
     const content = document.getElementById('content');
 
-    content.appendChild(createHeader);
-    content.appendChild(createMain);
-    content.appendChild(createFooter);
+    content.appendChild(createHeader());
+    content.appendChild(createMain());
+    content.appendChild(createFooter());
 
+    setActiveBtn(document.querySelector(".nav-btn"));
     //Load homepage initially
     loadHome();
 };
 
-export default loadWebsite;
+loadWebsite();
